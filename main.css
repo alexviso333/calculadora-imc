@@ -1,0 +1,109 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5753c9;
+}
+
+#scale {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 20px auto;
+  background: linear-gradient(to right, #a8d5e2 0%, #a8d5e2 25%, #b8e2a8 25%, #b8e2a8 50%, #f3e2a8 50%, #f3e2a8 75%, #e2a8a8 75%, #e2a8a8 100%);
+  border-radius: 100px 100px 0 0;
+  border: 4px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#needle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 100px;
+  background: #333;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
+
+#needle::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  width: 12px;
+  height: 20px;
+  background: #333;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.labels {
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.8em;
+  color: #555;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#ads {
+  margin-top: 20px;
+}
